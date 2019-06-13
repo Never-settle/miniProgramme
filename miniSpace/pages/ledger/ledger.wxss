@@ -1,0 +1,121 @@
+/* pages/ledger/ledger.wxss */
+
+.weui-navbar__title {
+  line-height: 40px;
+}
+ 
+.weui-navbar__slider {
+  position: relative;
+  width: 100%;
+}
+
+.weui-navbar__item {
+  padding: 0;
+}
+
+.weui-cell::before {
+  left: 0;
+  right: 0;
+}
+
+.create_file_wrap {
+  position: fixed;
+  width: 100%;
+  padding: 5px 8px;
+  margin: 0;
+  bottom: 0;
+  background-color: white;
+  color: #e67300;
+  text-align: left;
+  font-weight: normal;
+  z-index: 500;
+}
+
+.create_file_iput_wrap {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+  padding-right: 5px;
+}
+
+.create_file_iput_wrap input {
+  border: 1px solid #eee;
+  height: 40px;
+}
+
+.create_file_btn {
+  border-left: 1px solid #e67300;
+  display: inline-block;
+  width: 19%;
+  text-align: center;
+}
+
+.create_tips {
+  width: 50%;
+  height: 80px;
+  position: fixed;
+  bottom: 52px;
+  right: 0;
+  margin-right: 5px;
+}
+
+.create_tips_bd {
+  text-align: center;
+  line-height: 60px;
+  background-color: white;
+  width: 100%;
+  border-radius: 5px;
+  height: 65px;
+}
+
+.create_tips_tri {
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+}
+
+.detail_tips {
+  width: 90%;
+  margin-left: 5%;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  background-color: white;
+}
+
+.detail_tips_bd {
+  padding: 0 10px;
+  text-align: left;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.detail_tips_title {
+  vertical-align: top;
+  display: inline-block;
+  text-align: right;
+  width: 15%;
+  padding-right: 10px;
+  margin: 5px 5px 5px 0;
+  border-right: 1px solid black;
+}
+
+.detail_tips_content {
+  vertical-align: top;
+  display: inline-block;
+  width: 75%;
+  padding-right: 10px;
+   padding-left: 40px;
+  margin: 5px 5px 5px 0;
+}
+
+.test {
+  background-color: #eee;
+}

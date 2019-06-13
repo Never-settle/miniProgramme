@@ -1,0 +1,6 @@
+<!--pages/recommand/recommand.wxml-->
+<text style='font-size:18px;color:rgb(147, 161, 160);'>欢迎来到色彩庄园！\n
+在庄园里你需要找出所有色块中颜色不同的一个\n
+该庄园为您提供简单、一般、困难模式，模式的时长依次递减
+同时，如果您在1秒内找出不一样的色彩种子，简单模式为您增加2秒的时长，一般模式增加1秒的时长，困难模式不增加时长。祝您玩得愉快。</text>
+  <image class='background' src='../images/background2.jpg'></image>

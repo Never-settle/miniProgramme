@@ -1,0 +1,10 @@
+.hd{
+    padding: 160rpx 0 60rpx;
+    font-size: 58rpx;
+    color: #fbc466;
+}
+
+.level{
+    font-size: 58rpx;
+    color: #fbc466;
+}

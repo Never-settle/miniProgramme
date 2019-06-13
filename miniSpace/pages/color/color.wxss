@@ -1,0 +1,24 @@
+/**index.wxss**/
+
+.hd{
+  color: #fff;
+  margin-top: 200rpx;
+  font-size: 50rpx;
+  text-shadow: 1px 1px 1px #AB3C3C;
+}
+
+.bd{
+  color: #fc815f;
+  margin-top: 100rpx;
+  font-size: 36rpx;
+}
+
+/*.backView{
+  position: relative;
+  width: 750rpx;
+  height: 800px;
+  background:rebeccapurple;
+}*/
+
+
+

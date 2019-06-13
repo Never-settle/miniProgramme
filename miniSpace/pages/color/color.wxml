@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container2 text-center ">
+  <image class='background' src='../images/background2.jpg'></image>
+  <view class="hd">
+    <text>色彩庄园</text>
+  </view>
+   <view class="bd">
+  <button bindtap='torecommand' class="g-b" hover-class="g-btn-active" >游戏说明</button>
+  </view>
+
+  <view class="go-box">
+    <view >
+      <button bindtap='f0' style="margin-top: 60rpx;" hover-class="g-btn-active" >简单模式</button>
+    </view>
+    <view>
+      <button bindtap='f1' style="margin-top: 20rpx;" hover-class="g-btn-active" >一般模式</button>
+    </view>
+    <view >
+      <button bindtap='f2' style="margin-top: 20rpx;" hover-class="g-btn-active" >困难模式</button>
+    </view>
+  </view>
+</view>

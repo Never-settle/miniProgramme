@@ -1,0 +1,71 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar" style="background-color:white">
+        <block wx:for="{{mode.tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{mode.activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+            <view class="weui-navbar__slider" hidden="{{mode.activeIndex != index}}"></view>
+          </view>
+        </block>
+      </view>
+      <view scroll-y class="weui-tab__panel" style="min-height:{{pageHeight-30}}px">
+        <view class="weui-tab__content" style="padding-bottom:55px" hidden="{{mode.activeIndex != 0 && mode.activeIndex != 1 }}">
+          <view class="weui-flex" style="padding-left:20px">
+            <view class="weui-flex__item" hidden="{{mode.activeIndex != 0}}">总支出：{{poolLeft}}</view>
+          </view>
+          <view class="weui-cells">
+            <view class="weui-cell weui-cell_access">
+              <view style="width:20%;border-right:1px solid #eee;text-align:center"></view>
+              <view style="width:30%;border-right:1px solid #eee;margin-right:10px;text-align:center">日期</view>
+              <view class="weui-flex__item" style="text-align:center">金额</view>
+            </view>
+            <view wx:for="{{poolLogs}}" wx:key="index" class="weui-cell weui-cell_access" id="{{index}}" bindtap="showPoolDetail" bindlongpress="showPoolDelete" style="{{item.hide?'':'background-color:#eee'}}">
+              <view style="width:20%;border-right:1px solid #eee;text-align:center" hidden="{{mode.activeIndex == 1}}">{{index+1}}</view>
+              <view style="width:20%;border-right:1px solid #eee;text-align:center" hidden="{{mode.activeIndex != 1}}" catchtap='deletePoolLogConfirm' id="{{index}}_delete"><icon type="cancel" size="23"></icon></view>
+              <view style="width:30%;border-right:1px solid #eee;margin-right:10px;text-align:center">{{item.toDate}}</view>
+              <view class="weui-flex__item" style="text-align:center">{{item.amount>0?'+'+item.amount:item.amount}}</view>
+              <view class="detail_tips" hidden="{{item.hide}}" style="{{detailTips.dirction=='bottom'?'top:100%;':'bottom:100%;'}}">
+                <view class="detail_tips_bd">
+                  <view class="detail_tips_title">详情</view>
+                  <view class="detail_tips_content">{{item.desc}}</view>
+                </view>
+                <view class="detail_tips_bd">
+                  <view class="detail_tips_title">金额</view>
+                  <view class="detail_tips_content">{{item.amount>0 ?item.amount+' (收入)':item.amount+' (支出)'}}</view>
+                </view>
+                <view class="detail_tips_bd">
+                  <view class="detail_tips_title">时间</view>
+                  <view class="detail_tips_content">{{item.toTime}}</view>
+                </view>
+              </view>
+            </view>
+
+          </view>
+
+        </view>
+       <!--  <view class="weui-tab__content" hidden="{{mode.activeIndex != 1}}">选项二的内容</view>-->
+        
+
+
+      </view>
+    </view>
+    <view class="create_tips" hidden="{{createTips.hide}}">
+      <view class="create_tips_bd" style="color:{{createTips.textColor}}">
+        {{createTips.text}}</view>
+      <view class="create_tips_tri"></view>
+    </view>
+    <view class='create_file_wrap' hidden="{{mode.activeIndex != 0}}">
+      <picker class="create_file_iput_wrap" style="width:10%" bindchange="handleSelectChange" id="poolLogType" value="{{poolLogType}}" range="{{poolLogTypeOption}}">
+        <view>{{poolLogTypeOption[poolLogType]}}</view>
+      </picker>
+      <view class="create_file_iput_wrap">
+        <input placeholder='金额' id="newPoolLog.amount" value="{{newPoolLog.amount}}" bindinput="handleInput" />
+      </view>
+      <view class="create_file_iput_wrap">
+        <input placeholder='详情' id="newPoolLog.desc" value="{{newPoolLog.desc}}" bindinput="handleInput" />
+      </view>
+      <view class="create_file_btn" id="newPoolCreate" bindtap="handleCreate">提交</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/game/game.wxml-->
+<view class="container">
+  <view class="board">
+    <view>
+      <view class="board-row">
+        <view class="square" id="0" bindtap="tapSelect" style="color:{{color[0]}}">{{data[0]}}</view>
+        <view class="square" id="1" bindtap="tapSelect" style="color:{{color[1]}}">{{data[1]}}</view>
+        <view class="square" id="2" bindtap="tapSelect" style="color:{{color[2]}}">{{data[2]}}</view>
+      </view>
+      <view class="board-row">
+        <view class="square" id="3" bindtap="tapSelect" style="color:{{color[3]}}">{{data[3]}}</view>
+        <view class="square" id="4" bindtap="tapSelect" style="color:{{color[4]}}">{{data[4]}}</view>
+        <view class="square" id="5" bindtap="tapSelect" style="color:{{color[5]}}">{{data[5]}}</view>
+      </view>
+      <view class="board-row">
+        <view class="square" id="6" bindtap="tapSelect" style="color:{{color[6]}}">{{data[6]}}</view>
+        <view class="square" id="7" bindtap="tapSelect" style="color:{{color[7]}}">{{data[7]}}</view>
+        <view class="square" id="8" bindtap="tapSelect" style="color:{{color[8]}}">{{data[8]}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="usermotto">
+    <text wx:if="{{haveWinner}}" class="user-motto"><text style="color:red;font-size:20px;">{{winner}}</text>胜利！</text>
+    <text wx:elif="{{end}}" class="user-motto">和局</text>
+    <text wx:else class="user-motto">游戏中</text>
+  </view>
+  <button wx:if="{{haveWinner||end}}" type="primary" size="normal" bindtap="resetGame" style="margin-top:10rpx;background-color:rgb(235, 193, 56);width:60%;"> 重新开始 </button>
+</view>

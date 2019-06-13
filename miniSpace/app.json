@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/ledger/ledger", 
+    "pages/logs/logs",
+    "pages/tictactoe/tictactoe",
+    "pages/whacamole/whacamole",
+    "pages/color/color",
+    "pages/game/game",
+    "pages/over/over",
+    "pages/recommand/recommand"
+    
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "个人中心",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/main/main",
+        "iconPath": "pages/images/recommand.jpg",
+        "selectedIconPath": "pages/images/recommand-selected.jpg"
+      },
+      {
+        "text": "个人",
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/game.jpg",
+        "selectedIconPath": "pages/images/game-selected.jpg"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#1874CD"
+  }
+}

@@ -1,0 +1,30 @@
+<view class='calendar_title flex_nowrap'>
+<image class='background' src='../images/00.jpg'></image>
+  <view class='icon' bindtap='lastMonth'>
+    <image src='../images/1.jpg' />
+  </view>
+  <view>{{year}}年{{month}}月</view>
+  <view class='icon' bindtap='nextMonth'>
+    <image src='../images/2.jpg' />
+  </view>
+</view>
+
+<!-- 日历主体 -->
+<view class='calendar'>
+  <view class='header'>
+    <view wx:for='{{date}}' wx:key='' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}
+      <view></view>
+    </view>
+  </view>
+
+  <view class='date-box'>
+    <block wx:for='{{dateArr}}' wx:key=''>
+      <view class='{{isToday == item.isToday ? "nowDay" : ""}}'>
+        <view class='date-head' bindtap='lookHuoDong' data-year='{{year}}' data-month='{{month}}' data-datenum='{{item.dateNum}}'>
+          <view>{{item.dateNum}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,55 @@
+/* pages/game/game.wxss */
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1rpx solid #999;
+  float: left;
+  font-size: 120rpx;
+  font-weight: bold;
+  line-height: 150rpx;
+  height: 150rpx;
+  margin-right: -1rpx;
+  margin-top: -1rpx;
+  padding: 0;
+  text-align: center;
+  width: 150rpx;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.usermotto {
+  margin-top: 100px;
+}

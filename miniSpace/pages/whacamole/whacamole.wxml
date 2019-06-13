@@ -1,0 +1,29 @@
+<!--pages/whacamole/whacamole.wxml-->
+<view class="container">
+<view wx:if="{{readyTime!=0}}">{{readyTime}}</view>
+<view wx:elif="{{!end}}">打打打</view>
+  <view class="board">
+    <view>
+      <view class="board-row">
+        <view class="square" id="0" bindtap="hit" style="color:{{color[0]}}">{{holes[0]}}</view>
+        <view class="square" id="1" bindtap="hit" style="color:{{color[1]}}">{{holes[1]}}</view>
+        <view class="square" id="2" bindtap="hit" style="color:{{color[2]}}">{{holes[2]}}</view>
+      </view>
+      <view class="board-row">
+        <view class="square" id="3" bindtap="hit" style="color:{{color[3]}}">{{holes[3]}}</view>
+        <view class="square" id="4" bindtap="hit" style="color:{{color[4]}}">{{holes[4]}}</view>
+        <view class="square" id="5" bindtap="hit" style="color:{{color[5]}}">{{holes[5]}}</view>
+      </view>
+      <view class="board-row">
+        <view class="square" id="6" bindtap="hit" style="color:{{color[6]}}">{{holes[6]}}</view>
+        <view class="square" id="7" bindtap="hit" style="color:{{color[7]}}">{{holes[7]}}</view>
+        <view class="square" id="8" bindtap="hit" style="color:{{color[8]}}">{{holes[8]}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="usermotto">
+    <text wx:if="{{end}}" class="user-motto">游戏结束-分数：{{score}}</text>
+    <text wx:else class="user-motto">分数：{{score}}</text>
+  </view>
+  <button wx:if="{{end}}" type="primary" size="mini" bindtap="resetGame" style="margin-top:10rpx;background-color:rgb(235, 193, 56);width:60%;"> 重新开始 </button>
+</view>
