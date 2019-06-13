@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/game/game",
+    "pages/over/over",
+    "pages/recommand/recommand"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f9bdbd",
+    "navigationBarTitleText": "识色游戏",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "详情",
+        "pagePath": "pages/recommand/recommand",
+        "iconPath": "pages/images/recommand.jpg",
+        "selectedIconPath": "pages/images/recommand-selected.jpg"
+      },
+      {
+        "text": "游戏",
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/game.jpg",
+        "selectedIconPath": "pages/images/game-selected.jpg"
+      }
+    ],
+    "color": "#000000",
+    "selectedColor": "#1874CD"
+  }
+  
+}

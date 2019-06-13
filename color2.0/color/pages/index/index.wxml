@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container layout text-center">
+
+  <view class="hd">
+    <text>识色游戏</text>
+  </view>
+  <view class="bd">
+    <text>找出所有色块中颜色不同的一个</text>
+  </view>
+
+  <view class="bd">
+  <button bindtap='torecommand' class="g-b" hover-class="g-btn-active" >游戏说明</button>
+  </view>
+
+  <view class="go-box">
+    <view >
+      <button bindtap='f0' class="g-btn" hover-class="g-btn-active" >简单模式</button>
+    </view>
+    <view>
+      <button bindtap='f1' style="background: #f3a51f;color: rgb(255, 255, 255);width: 50%;margin-top: 20rpx;" hover-class="g-btn-active" >一般模式</button>
+    </view>
+    <view >
+      <button bindtap='f2' style="background: #f3a51f;color: rgb(255, 255, 255);width: 50%;margin-top: 20rpx;" hover-class="g-btn-active" >困难模式</button>
+    </view>
+  </view>
+</view>
